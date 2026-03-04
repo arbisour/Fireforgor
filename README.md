@@ -1,7 +1,6 @@
+I ALSO HAVE NOT TESTED THIS YET SO IF YOU STUMBLE ON THIS PLEASE DONT INSTALL IT YET
 I wanted to try and help streamline getting this on any Debian 12 VPS with systemd (this may work on Ubuntu as well) so I decided to create this fire and forgor script.
-If you need to edit the systemd worker to change the default values, I highly recommend nano, and you would change the line
-
-ExecStart=/usr/bin/screen -L -dmS minerva %h/.local/bin/uvx --refresh --from=minerva-worker minerva run -c4 -b6 -a8
+PLEASE READ FROM TOP TO BOTTOM
 
 Script instructions:
 1. After downloading the script, run chmod +x fireforgor.sh
@@ -21,3 +20,9 @@ Discord login instructions:
 6. Run curl -L "[the url you copied]"
 7. You should see in green text a login success message
 8. then run systemctl --user start minerva
+
+If you need to edit the systemd worker to change the default values, I highly recommend nano (sudo apt install nano) and you'd run:
+nano ~/.config/systemd/user/minerva.service
+and look at the end of the ExecStart= line to adjust -c -b -a values (default is 4 6 and 8 to not blow up your server)
+RuntimeMaxSec=6h restarts the service every 6 hours and when it's ran it gets the latest script uploaded in pip
+The ExecPreStart and ExecStop lines are commented out, but if you uncomment these they will clear the tmp folder on stop and restart, but the script now supports clearing tmp
