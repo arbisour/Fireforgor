@@ -29,7 +29,7 @@ Discord login instructions:
 10. press CTRL + A + D (like you would CTRL + ALT + DELETE or something) to leave the screen
 
 Uninstall instructions:
-1. Download and run uninstall.sh
+1. Download uninstall.sh then run chmod +x uninstall.sh
 2. You'll have to remove aria2, wget, screen, (sudo apt remove <name>) 
 and clear ./minerva-dpn/tmp in case you're saving those files
 
