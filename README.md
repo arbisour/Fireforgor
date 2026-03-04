@@ -1,6 +1,6 @@
 I ALSO HAVE NOT TESTED THIS YET SO IF YOU STUMBLE ON THIS PLEASE DONT INSTALL IT YET
 
-I wanted to try and help streamline getting this on any Debian 12 VPS with systemd 
+I wanted to try and help streamline getting minerva easily on any Debian 12 VPS with systemd 
 (this may work on Ubuntu as well) so I decided to create this fire and forgor script.
 
 PLEASE READ FROM TOP TO BOTTOM
