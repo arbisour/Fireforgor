@@ -13,7 +13,7 @@ Script instructions:
 3. authenticate with sudo and wait for the script to finish,
 what it's going to do is install screen, wget, and aria2c in case they aren't installed
 then create you a folder in ~/.config/systemd/user, and then download my minervaworker.service file
-4. follow the discord login instructions
+4. log out and back in (restart your shell), then follow the discord login instructions
 
 Discord login instructions:
 1. run uvx --refresh --from=minerva-worker minerva login
