@@ -54,6 +54,6 @@ You - for being apart of a great cause
 
 Minerva Team - for making the really awesome script and just being awesome
 
-Mak - helping me with understanding systemd
+Mak - helping me with understanding systemd and uvx
 
-Arbi - shoving this all together
+Arbi - creating the fireforgor.sh and uninstall.sh scripts, shoving the github together.
