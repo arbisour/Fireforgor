@@ -1,0 +1,14 @@
+[Unit]
+Description=Minerva Worker
+After=network.target
+
+[Service]
+Type=forking
+Restart=always
+RuntimeMaxSec=6h
+;ExecStartPre=/usr/bin/rm -rf %h/.minerva-dpn/tmp/myrient.erista.me
+ExecStart=/usr/bin/screen -L -dmS minerva %h/.local/bin/uvx --refresh --from=minerva-worker minerva run -c8 -b12 -a16
+;ExecStop=/usr/bin/rm -rf %h/.minerva-dpn/tmp/myrient.erista.me
+
+[Install]
+WantedBy=default.target
