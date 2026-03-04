@@ -25,6 +25,8 @@ Discord login instructions:
 6. Run curl -L "[the url you copied]"
 7. You should see in green text a login success message
 8. then run systemctl --user start minerva
+9. once started, you can monitor it by running screen -r minerva
+10. press CTRL + A + D (like you would CTRL + ALT + DELETE or something) to leave the screen
 
 Uninstall instructions:
 1. Download and run uninstall.sh
