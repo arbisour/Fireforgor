@@ -28,6 +28,13 @@ Discord login instructions:
 7. You should see in green text a login success message
 8. then run systemctl --user start minerva
 
+Uninstall instructions:
+1. Download and run uninstall.sh
+2. You'll have to remove aria2, wget, screen, (sudo apt remove <name>) 
+and clear ./minerva-dpn/tmp in case you're saving those files
+
+
+
 If you need to edit the systemd worker to change the default values, 
 
 I highly recommend nano (sudo apt install nano) and you'd run:
