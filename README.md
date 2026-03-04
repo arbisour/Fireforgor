@@ -49,7 +49,11 @@ but if you uncomment these they will clear the tmp folder on stop and restart,
 but the script now supports clearing tmp
 
 Credits:
+
 You - for being apart of a great cause
+
 Minerva Team - for making the really awesome script and just being awesome
+
 Mak - helping me with understanding systemd
+
 Arbi - shoving this all together
