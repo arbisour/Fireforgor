@@ -1,7 +1,11 @@
 I ALSO HAVE NOT TESTED THIS YET SO IF YOU STUMBLE ON THIS PLEASE DONT INSTALL IT YET
 
+This is based on: https://github.com/rlaphoenix/minerva/releases
+
 I wanted to try and help streamline getting minerva easily on any Debian 12 VPS with systemd 
 (this may work on Ubuntu as well) so I decided to create this fire and forgor script.
+
+ALSO HIGHLY RECOMMEND NOT RUNNING THIS AS ROOT BUT AS A USER ACCOUNT
 
 PLEASE READ FROM TOP TO BOTTOM
 
@@ -9,7 +13,7 @@ Script instructions:
 1. After downloading the script, run chmod +x fireforgor.sh
 2. run ./fireforgor.sh
 3. authenticate with sudo and wait for the script to finish,
-what it's going to do is install screen and wget in case they aren't installed
+what it's going to do is install screen, wget, and aria2c in case they aren't installed
 then create you a folder in ~/.config/systemd/user, and then download my minervaworker.service file
 4. follow the discord login instructions
 
@@ -24,10 +28,21 @@ Discord login instructions:
 7. You should see in green text a login success message
 8. then run systemctl --user start minerva
 
-If you need to edit the systemd worker to change the default values, I highly recommend nano (sudo apt install nano) and you'd run:
+If you need to edit the systemd worker to change the default values, 
+
+I highly recommend nano (sudo apt install nano) and you'd run:
+
 nano ~/.config/systemd/user/minerva.service
 and look at the end of the ExecStart= line to adjust -c -b -a values (default is 4 6 and 8 to not blow up your server)
+
 RuntimeMaxSec=6h restarts the service every 6 hours and when it's ran it gets the latest script uploaded in pip
+
 The ExecPreStart and ExecStop lines are commented out, 
 but if you uncomment these they will clear the tmp folder on stop and restart, 
 but the script now supports clearing tmp
+
+Credits:
+You - for being apart of a great cause
+Minerva Team - for making the really awesome script and just being awesome
+Mak - helping me with understanding systemd
+Arbi - shoving this all together
