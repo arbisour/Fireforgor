@@ -1,5 +1,3 @@
-I ALSO HAVE NOT TESTED THIS YET SO IF YOU STUMBLE ON THIS PLEASE DONT INSTALL IT YET
-
 This is based on: https://github.com/rlaphoenix/minerva/releases
 
 I wanted to try and help streamline getting minerva easily on any Debian 12 VPS with systemd 
