@@ -4,6 +4,7 @@ echo "hai i am going to install the minerva worker, get ready!!"
 echo "gathering dependencies . . ."
 sudo apt install screen
 sudo apt install wget
+sudo apt install aria2
 wget -qO- https://astral.sh/uv/install.sh | sh #this is uv/uvx
 
 echo "creating folder . . ."
