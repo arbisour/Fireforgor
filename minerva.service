@@ -5,9 +5,11 @@ After=network.target
 [Service]
 Type=forking
 Restart=always
+;change this if you want to change the restart time
 RuntimeMaxSec=6h
+;uncomment this and the one below if you want to have the script manually clear the tmp folder on start and stop
 ;ExecStartPre=/usr/bin/rm -rf %h/.minerva-dpn/tmp/myrient.erista.me
-ExecStart=/usr/bin/screen -L -dmS minerva %h/.local/bin/uvx --refresh --from=minerva-worker minerva run -c8 -b12 -a16
+ExecStart=/usr/bin/screen -L -dmS minerva %h/.local/bin/uvx --refresh --from=minerva-worker minerva run -c4 -b6 -a8
 ;ExecStop=/usr/bin/rm -rf %h/.minerva-dpn/tmp/myrient.erista.me
 
 [Install]
